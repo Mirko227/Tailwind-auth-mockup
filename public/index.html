@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100%">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-yellow font-lora min-h-full min-w-[250px] grid place-items-center 2xl:mx-2xl xl:mx-xl lg:mx-lg mx-0">
+  
+    <div class="circle rounded-full top-0 right-0 translate-x-1/2 -translate-y-1/2 fixed z-10 aspect-square" id="circle1"></div>    
+    <div class="circle rounded-full top-0 right-0 translate-x-1/2 -translate-y-1/2 fixed z-10 aspect-square" id="circle2"></div>    
+    <div class="circle rounded-full top-0 right-0 translate-x-1/2 -translate-y-1/2 fixed z-10 aspect-square" id="circle3"></div>
+
+    <div class="wrapper relative max-w-[1680px] w-100% flex lg:justify-between items-center justify-center"> 
+
+        <img class="login-svg 2xl:w-loginSvg2XL xl:w-loginSvgXL w-loginSvgLG lg:block hidden" id="login-svg" src="./Svgs/login.svg" alt="login image">
+        <img class="sign-up-svg order-2 2xl:w-registerSvg2XL xl:w-registerSvgXL w-registerSvgLG lg:hidden hidden" id="sign-up-svg" src="./Svgs/sign-up.svg" alt="sign up image">        
+                    
+        <div class="login-container sm:my-8 my-4 flex flex-col xl:gap-10 lg:gap-8 sm:gap-10 xs:gap-8 gap-5 min-w-max 2xl:max-w-[680px] xl:max-w-[570px] lg:max-w-[464px] lg:w-45% sm:w-85% sm:max-w-[584px] xs:w-85% xs:max-w-[416px] w-90% 2xs:max-w-[320px] max-w-[280px]" id="login-container">
+                <div class="header font-quattrocento">
+                    <h1 class="text-center text-login-blue-tint-10 2xl:text-76 xl:text-61 lg:text-48 sm:text-61 xs:text-48 2xs:text-39 text-31 font-quattrocento font-bold leading-none">Let's sign you in.<br><span class="text-center text-login-pink 2xl:text-61 xl:text-48 lg:text-39 sm:text-48 xs:text-39 2xs:text-31 text-25">Welcome back!</span></h1>
+                </div>
+                
+                <form class="flex flex-col 2xl:gap-12 xl:gap-10 lg:gap-8 sm:gap-10 gap-8" action="">
+                    <div class="login-data flex flex-col gap-2 text-login-blue-tint-40">
+                        <div class="flex flex-col xs:gap-6 2xs:gap-4 gap-3">
+                        <input class="border-4 rounded-full border-yellow-30 2xl:px-9 xl:px-8 lg:px-7 sm:px-8 sm:py-4 xs:px-6 2xs:py-3 py-2 px-5 2xl:text-31 xl:text-25 lg:text-20 sm:text-25 xs:text-20 text-base bg-transparent text-login-blue-tint-20 placeholder-login-blue-tint-50 focus:outline-none focus:border-login-blue-tint-20" type="text" placeholder="Username" name="Username" id="login-Username">
+                        <input class="border-4 rounded-full border-yellow-30 2xl:px-9 xl:px-8 lg:px-7 sm:px-8 sm:py-4 xs:px-6 2xs:py-3 py-2 px-5 2xl:text-31 xl:text-25 lg:text-20 sm:text-25 xs:text-20 text-base bg-transparent text-login-blue-tint-20 placeholder-login-blue-tint-50 focus:outline-none focus:border-login-blue-tint-20" type="password" placeholder="Password" name="Password" id="login-Password"> 
+                        </div>
+                        <a href="#" class="text-right 2xl:text-20 xl:text-base lg:text-small sm:text-base xs:text-base text-small mr-1 text-login-blue-tint-40 hover:underline focus:underline">Forgot password?</a>       
+                    </div>
+                    <div class="login-cta flex flex-col gap-2">
+                        <p class="text-center 2xl:text-25 xl:text-20 lg:text-base sm:text-20 text-base  text-login-blue-tint-30">Don't have an account? <button class="text-login-blue-tint-10 font-bold hover:text-sign-up-pink focus:text-sign-up-pink" id="register-btn" type="button">Register</button></p>
+                        <button class="bg-login-blue rounded-full text-yellow font-quattrocento xs:py-4 2xs:py-3 py-2 2xl:text-25 xl:text-20 lg:text-base sm:text-20 xs:text-base text-base hover:bg-login-blue-tint-20 focus:bg-login-blue-tint-20" type="submit">Sign in</button>
+                    </div>
+                </form>
+        </div>  
+    
+
+        
+        <div class="sign-up-container sm:my-8 my-4 hidden order-1 flex-col xl:gap-10 lg:gap-8 sm:gap-10 xs:gap-8 gap-5 min-w-max 2xl:max-w-[680px] xl:max-w-[570px] lg:max-w-[464px] lg:w-45% sm:w-85% sm:max-w-[584px] xs:w-85% xs:max-w-[416px] w-90% 2xs:max-w-[320px] max-w-[280px]" id="sign-up-container">
+            <div class="header font-quattrocento">
+                <h1 class="text-center text-sign-up-blue-tint-95 2xl:text-76 xl:text-61 lg:text-48 sm:text-61 xs:text-48 2xs:text-39 text-31 font-quattrocento font-bold leading-none">Let's sign you up.<br><span class="text-center text-sign-up-pink-tint-10 2xl:text-61 xl:text-48 lg:text-39 sm:text-48 xs:text-39 2xs:text-31 text-25">Hello, Welcome!</span></h1>
+            </div>
+            
+            <form class="flex flex-col xs:gap-10 gap-8" action="">
+                <div class="login-data flex flex-col gap-2 text-login-blue-tint-40">
+                    <div class="flex flex-col xs:gap-6 2xs:gap-4 gap-3">
+                    <input class="border-4 rounded-full border-sign-up-blue-tint-80 2xl:px-9 xl:px-8 lg:px-7 sm:px-8 sm:py-4 xs:px-6 2xs:py-3 py-2 px-5 2xl:text-31 xl:text-25 lg:text-20 sm:text-25 xs:text-20 text-base bg-transparent placeholder-sign-up-blue-tint-70 text-sign-up-white focus:outline-none focus:border-sign-up-pink-tint-10" type="text" placeholder="Username" name="Username" id="sign-up-Username">
+                    <input class="border-4 rounded-full border-sign-up-blue-tint-80 2xl:px-9 xl:px-8 lg:px-7 sm:px-8 sm:py-4 xs:px-6 2xs:py-3 py-2 px-5 2xl:text-31 xl:text-25 lg:text-20 sm:text-25 xs:text-20 text-base bg-transparent placeholder-sign-up-blue-tint-70 text-sign-up-white focus:outline-none focus:border-sign-up-pink-tint-10" type="email" placeholder="Email" name="Email" id="sign-up-Email">
+                    <input class="border-4 rounded-full border-sign-up-blue-tint-80 2xl:px-9 xl:px-8 lg:px-7 sm:px-8 sm:py-4 xs:px-6 py-2 px-5 2xl:text-31 xl:text-25 lg:text-20 sm:text-25 xs:text-20 text-base bg-transparent placeholder-sign-up-blue-tint-70 text-sign-up-white focus:outline-none focus:border-sign-up-pink-tint-10" type="password" placeholder="Password" name="Password" id="sign-up-Password"> 
+                    </div>
+                </div>
+                <div class="login-cta flex flex-col gap-2">
+                    <p class="text-center 2xl:text-25 xl:text-20 lg:text-base sm:text-20 text-base text-sign-up-blue-tint-70">Already have an account? <button class="text-sign-up-white font-medium hover:text-sign-up-pink-tint-40 focus:text-sign-up-pink-tint-40" type="button" id="login-btn">Sign in</button></p>
+                    <button class="bg-sign-up-pink font-bold rounded-full text-sign-up-white font-quattrocento xs:py-4 2xs:py-3 py-2 2xl:text-25 xl:text-20 lg:text-base sm:text-20 xs:text-base text-base hover:bg-sign-up-pink-tint-10 focus:bg-sign-up-pink-tint-10" type="submit">Sign up</button>
+                </div>
+            </form>
+        </div>  
+
+    </div>
+
+</body>
+</html>
