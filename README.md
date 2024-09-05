@@ -1,29 +1,10 @@
-### Come Funziona:
+# Tailwind-auth-mockup
+A fully responsive front-end login/sign-up page developed using Tailwind CSS and GSAP.
 
-1. **Blocco di codice**: Il codice è racchiuso tra tre backtick \`\`\`.
-2. **Specificare la sintassi**: Dopo i tre backtick iniziali, aggiungi `bash` per indicare che il codice è Bash. Questo permette a GitHub di applicare l'evidenziazione della sintassi appropriata.
-3. **Scrivi il tuo codice**: Inserisci il codice Bash all'interno del blocco.
+![tailwind-authpage-mockup](https://github.com/user-attachments/assets/fd688e8f-677f-488a-bac0-54e671609277)
 
-### Output nel file Markdown:
+# How to Install and Run the Project
+**Install dependencies:** Open your terminal in the project directory and install all the dependencies listed in the package.json file.
 
-Nel file Markdown su GitHub, il codice apparirà con l'evidenziazione della sintassi corretta, rendendolo più leggibile per gli sviluppatori.
-
-### Risultato su GitHub:
-
-```bash
-#!/bin/bash
-
-# Update and upgrade the system
-sudo apt-get update && sudo apt-get upgrade -y
-
-# Install necessary packages
-sudo apt-get install -y git curl
-
-# Clone the repository
-git clone https://github.com/username/repository.git
-
-# Navigate to the project directory
-cd repository
-
-# Run the setup script
-./setup.sh
+**Track CSS changes:** ````bash
+npm run build
