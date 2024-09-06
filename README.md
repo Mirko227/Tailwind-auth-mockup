@@ -9,9 +9,9 @@ A fully responsive front-end login/sign-up page developed using Tailwind CSS and
 
 
 # How to Install and Run the Project
-## - Install dependencies:
+- Install dependencies:
 Open your terminal in the project directory and install all the dependencies listed in the `package.json` file.
 
-## - Track CSS changes:
+- Track CSS changes:
 ```bash
 npm run watch
